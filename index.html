@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IRCTC Train Search & Seat Availability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IRCTC Train Search & Seat Availability</h1>
+        <form id="searchForm">
+            <label for="source">Source Station Code:</label>
+            <input type="text" id="source" name="source" required placeholder="e.g. NDLS">
+
+            <label for="destination">Destination Station Code:</label>
+            <input type="text" id="destination" name="destination" required placeholder="e.g. BCT">
+
+            <label for="date">Date of Journey:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="SL">Sleeper (SL)</option>
+                <option value="3A">AC 3 Tier (3A)</option>
+                <option value="2A">AC 2 Tier (2A)</option>
+                <option value="1A">AC First Class (1A)</option>
+                <option value="CC">Chair Car (CC)</option>
+                <option value="2S">Second Sitting (2S)</option>
+            </select>
+
+            <label for="quota">Quota:</label>
+            <select id="quota" name="quota" required>
+                <option value="GN">General</option>
+                <option value="TQ">Tatkal</option>
+                <option value="LD">Ladies</option>
+            </select>
+
+            <button type="submit">Search Trains</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
