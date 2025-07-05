@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 40px auto;
     background: #fff;
     border-radius: 8px;
@@ -54,17 +54,33 @@ button:hover {
 #results {
     margin-top: 32px;
 }
-.train-card {
+
+.route-card {
     background: #f9fafb;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
 }
-.seat-availability {
-    margin-top: 8px;
-    font-size: 0.95em;
+
+.route-header {
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 8px;
 }
+
+.train-segment {
+    margin-bottom: 8px;
+    padding-left: 8px;
+    border-left: 3px solid #bfc9d1;
+}
+
+.waiting-time {
+    color: #c0392b;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
 .error {
     color: #c0392b;
     font-weight: bold;

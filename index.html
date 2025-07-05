@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IRCTC Train Search & Seat Availability</title>
+    <title>IRCTC Multi-Leg Route Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>IRCTC Train Search & Seat Availability</h1>
+        <h1>IRCTC Multi-Leg Route Finder</h1>
         <form id="searchForm">
             <label for="source">Source Station Code:</label>
             <input type="text" id="source" name="source" required placeholder="e.g. NDLS">
@@ -36,7 +36,13 @@
                 <option value="LD">Ladies</option>
             </select>
 
-            <button type="submit">Search Trains</button>
+            <label for="minBuffer">Minimum Buffer Waiting Time (minutes):</label>
+            <input type="number" id="minBuffer" name="minBuffer" required min="0" value="10">
+
+            <label for="maxBuffer">Maximum Total Buffer Waiting Time (minutes):</label>
+            <input type="number" id="maxBuffer" name="maxBuffer" required min="0" value="180">
+
+            <button type="submit">Search Routes</button>
         </form>
         <div id="results"></div>
     </div>
